@@ -511,19 +511,6 @@ p { text-wrap: pretty; }
   .process__media img { aspect-ratio: 4 / 5; }
 }
 
-/* ---- Calidad ---- */
-.quality__grid { display: grid; gap: var(--sp-7); }
-.quality__grid > div:first-child { display: grid; gap: var(--sp-5); align-content: start; }
-.quality__list { display: grid; }
-.quality__list > div { display: grid; gap: var(--sp-2); padding-block: var(--sp-5); border-top: 1px solid var(--line); }
-.quality__list dt { font-size: var(--fs-xs); font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--cyan-ink); }
-.quality__list dd { font-size: var(--fs-md); color: var(--text); max-width: 52ch; line-height: 1.5; }
-@media (min-width: 768px) { .quality__list > div { grid-template-columns: 12rem 1fr; gap: var(--sp-5); } }
-@media (min-width: 1024px) {
-  .quality__grid { grid-template-columns: 1fr 1.4fr; gap: var(--sp-9); }
-  .quality__grid > div:first-child { position: sticky; top: calc(var(--header-h) + var(--sp-6)); }
-}
-
 /* ---- Pacientes ---- */
 .patients { padding-bottom: 0; }
 .patients__card {
