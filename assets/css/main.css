@@ -347,7 +347,7 @@ p { text-wrap: pretty; }
 .stack:not(.is-exploded) .stack__layer--bot { top: 36%; }
 .stack__layer { transition-property: top, transform, filter, opacity; }
 .stack.has-focus .stack__layer { opacity: 0.4; filter: grayscale(0.5) drop-shadow(0 24px 24px rgb(10 26 58 / 0.12)); }
-.stack.has-focus .stack__layer.is-focus { opacity: 1; filter: drop-shadow(0 30px 30px rgb(10 26 58 / 0.3)); transform: rotateX(58deg) rotateZ(-38deg) translateZ(30px); }
+.stack.has-focus .stack__layer.is-focus { opacity: 1; z-index: 4; filter: drop-shadow(0 30px 30px rgb(10 26 58 / 0.3)); transform: rotateX(58deg) rotateZ(-38deg) scale(1.18); }
 .stack__axis { position: absolute; left: 50%; top: 8%; bottom: 4%; width: 1px; background: linear-gradient(var(--line), var(--cyan-ink), var(--line)); opacity: 0.6; }
 .stack__list { display: grid; gap: 0; counter-reset: s; border-top: 1px solid var(--line); }
 .stack__list li { padding: var(--sp-5) 0; border-bottom: 1px solid var(--line); cursor: default; transition: padding var(--dur-2) var(--ease-out); }
