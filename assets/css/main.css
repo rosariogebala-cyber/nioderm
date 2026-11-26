@@ -290,7 +290,7 @@ p { text-wrap: pretty; }
 .hv__cell:hover, .hv__cell:focus-within { z-index: 4; }
 .hv__cell-img { display: block; width: 100%; border-radius: 50%; box-shadow: 0 0 0 1px rgb(60 195 242 / 0.4), 0 14px 30px rgb(0 0 0 / 0.35); }
 .hv__cell-img img { border-radius: 50%; aspect-ratio: 1; object-fit: cover; transform-origin: 75% 50%; transition: transform 0.45s var(--ease-out); }
-.hv__cell:hover .hv__cell-img img, .hv__cell:focus-within .hv__cell-img img { transform: scale(1.55); }
+.hv__cell:hover .hv__cell-img img, .hv__cell:focus-within .hv__cell-img img { transform: scale(1.18); }
 .hv__cell-label { font-size: clamp(0.72rem, 2.3cqi, 0.86rem); font-weight: 600; text-align: center; line-height: 1.2; white-space: nowrap; }
 @container (max-width: 560px) { .hv__cell { right: 3%; } .hv__cell-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; } }
 .hv__cell-label small { display: block; font-weight: 450; color: var(--muted-light); font-size: 0.92em; }
