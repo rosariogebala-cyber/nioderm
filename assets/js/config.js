@@ -22,6 +22,6 @@ window.NIODERM_CONFIG = {
   //                   null → se muestra como "Próximamente".
   videos: {
     aplicacion: { type: 'mp4', src: 'assets/video/aplicacion.mp4' },
-    entrevista: null
+    entrevista: { type: 'mp4', src: 'assets/video/entrevista.mp4' }
   }
 };
