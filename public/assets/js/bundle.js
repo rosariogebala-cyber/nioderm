@@ -503,7 +503,7 @@ function initForm() {
 
 /* Asistente por reglas, con dos modos:
    1. Preguntas: responde sólo con información verificada (src/faq.json). Si no encuentra
-      coincidencia, deriva a una persona.
+      coincidencia, deriva al formulario de contacto.
    2. Evaluación de indicación: cuestionario guiado (triage.js) que devuelve
       apto / apto con observaciones / no incluido, y precarga el formulario de contacto. */
 
@@ -787,9 +787,10 @@ function initChat() {
       <p>${r.text}</p>${list('Motivos', ev.excludes)}${list('Observaciones', ev.observes)}${list('Recomendaciones', ev.advice)}${size}
       ${st !== 'red' ? '<p class="msg__note">Podés enviar fotografías clínicas del lecho limpio, con regla métrica, por email al equipo.</p>' : ''}
       <p class="msg__note">Resultado orientativo. La indicación final depende del criterio médico y de la evaluación del equipo de Terapias Avanzadas.</p>`;
-    const actions = st === 'red'
-      ? [button('Consultar con el equipo', prefillForm), button('Nueva evaluación', () => { userSays('Nueva evaluación'); startEval(); })]
-      : [button('Enviar solicitud con este resumen', prefillForm), button('Nueva evaluación', () => { userSays('Nueva evaluación'); startEval(); })];
+    const actions = [
+      button('Completar formulario', prefillForm),
+      button('Nueva evaluación', () => { userSays('Nueva evaluación'); startEval(); })
+    ];
     await say(html, actions, 'msg--result');
     ev.done = true;
     setChips([]);
