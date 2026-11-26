@@ -2,12 +2,12 @@
    Todo lo que depende del entorno de publicación vive acá. */
 window.NIODERM_CONFIG = {
   // Endpoint que recibe el formulario (POST JSON). En Vercel: /api/contact (ver api/contact.js).
-  // En GitHub Pages no hay servidor: FormSubmit reenvía la consulta al correo de prueba.
+  // En un hosting estático, FormSubmit reenvía la consulta a consultas@nioderm.com.ar.
   // La primera vez hay que confirmar el enlace que llega a esa casilla.
-  formEndpoint: 'https://formsubmit.co/ajax/ro_gebala@hotmail.com',
+  formEndpoint: 'https://formsubmit.co/ajax/consultas@nioderm.com.ar',
 
-  // Email de respaldo para el formulario y el asistente.
-  contactEmail: 'ro_gebala@hotmail.com',
+  // Email de respaldo si el envío automático falla.
+  contactEmail: 'consultas@nioderm.com.ar',
 
   // WhatsApp: dejar vacío hasta tener un número oficial. Formato: '5491100000000'.
   whatsapp: '',
