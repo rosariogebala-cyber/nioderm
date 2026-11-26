@@ -61,7 +61,7 @@ const jsonld = {
   '@graph': [
     {
       '@type': 'Organization', '@id': `${SITE_URL}#org`, name: 'Laboratorio Pablo Cassará', url: 'https://cassara.com.ar/',
-      telephone: '+54-11-4105-4100', email: 'consultas@cassara.com.ar',
+      email: 'consultas@nioderm.com.ar',
       address: { '@type': 'PostalAddress', streetAddress: 'Av. Gral. Paz 14268', postalCode: 'C1439GBV', addressLocality: 'Buenos Aires', addressCountry: 'AR' },
     },
     {

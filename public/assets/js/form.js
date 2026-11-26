@@ -79,7 +79,7 @@ export function initForm() {
       `Provincia: ${o.provincia}`, o.especialidad && `Especialidad: ${o.especialidad}`, o.institucion && `Institución: ${o.institucion}`,
       '', o.mensaje || ''
     ].filter((l) => l !== undefined && l !== false && l !== '');
-    return `mailto:${cfg.contactEmail || 'consultas@cassara.com.ar'}?subject=${encodeURIComponent('Consulta NIODERM — ' + o.nombre)}&body=${encodeURIComponent(lines.join('\n'))}`;
+    return `mailto:${cfg.contactEmail || 'consultas@nioderm.com.ar'}?subject=${encodeURIComponent('Consulta NIODERM — ' + o.nombre)}&body=${encodeURIComponent(lines.join('\n'))}`;
   };
 
   const show = (el) => { form.hidden = true; [done, fallback].forEach((x) => (x.hidden = x !== el)); el.focus(); };

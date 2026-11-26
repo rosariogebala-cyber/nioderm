@@ -58,7 +58,7 @@ Para regenerar imágenes: `npm i && npm run images && npm run build`.
 3. Variables de entorno (Project → Settings → Environment Variables):
    - `SITE_URL` → URL final con barra al final (ej. `https://cassara.com.ar/nioderm/`)
    - `RESEND_API_KEY` → clave de https://resend.com (dominio remitente verificado)
-   - `CONTACT_TO` → `consultas@cassara.com.ar` (o varios, separados por coma)
+   - `CONTACT_TO` → `consultas@nioderm.com.ar` (o varios, separados por coma)
    - `CONTACT_FROM` → p. ej. `NIODERM <web@cassara.com.ar>`
 4. Sin esas variables el formulario igual funciona: el envío devuelve 503 y el sitio ofrece mandar la consulta por email con los datos precargados.
 

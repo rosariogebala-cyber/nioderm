@@ -1,7 +1,7 @@
 // Función serverless (Vercel, Node 18+) que recibe el formulario y lo envía por email con Resend.
 // Variables de entorno:
 //   RESEND_API_KEY   (obligatoria)  — https://resend.com
-//   CONTACT_TO       (obligatoria)  — destinatario(s), separados por coma. Ej.: consultas@cassara.com.ar
+//   CONTACT_TO       (obligatoria)  — destinatario(s), separados por coma. Ej.: consultas@nioderm.com.ar
 //   CONTACT_FROM     (obligatoria)  — remitente verificado en Resend. Ej.: "NIODERM <web@cassara.com.ar>"
 //   ALLOWED_ORIGIN   (opcional)     — origen permitido para CORS si el front vive en otro dominio.
 // Sin variables configuradas responde 503 y el front ofrece enviar por email (mailto) con los datos precargados.

@@ -207,7 +207,7 @@ export const FAQ = [
  {
   "id": "acceso",
   "q": "¿Cómo solicito el tratamiento o más información?",
-  "a": "Completá el formulario de contacto de esta página indicando tu perfil, o comunicate al (+54) 11 4105-4100 o a consultas@cassara.com.ar. Si sos paciente, consultá primero con tu médico tratante.",
+  "a": "Completá el formulario de contacto de esta página indicando tu perfil y el equipo de Terapias Avanzadas te va a responder. Si sos paciente, consultá primero con tu médico tratante.",
   "keys": [
    "solicitar",
    "pedir",
