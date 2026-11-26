@@ -91,11 +91,14 @@ export function initChat() {
     return a;
   };
   const button = (label, fn, cls) => { const b = el('button', cls || null); b.type = 'button'; b.textContent = label; b.addEventListener('click', fn); return b; };
-  const humanActions = () => {
-    const acts = [link('Completar formulario', '#contacto', 'chatbot_to_form'), link('Llamar', `tel:${cfg.contactPhone || '+541141054100'}`, 'chatbot_call'), link('Email', `mailto:${cfg.contactEmail || 'consultas@cassara.com.ar'}`, 'chatbot_email')];
-    if (cfg.whatsapp) acts.unshift(link('WhatsApp', `https://wa.me/${cfg.whatsapp}?text=${encodeURIComponent('Hola, quiero información sobre NIODERM.')}`, 'chatbot_whatsapp'));
-    return acts;
+  // Única vía de derivación: el formulario de contacto.
+  const goToForm = () => {
+    track('chatbot_to_form');
+    setOpen(false);
+    document.getElementById('contacto')?.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
+    setTimeout(() => document.querySelector('[data-form]')?.elements.nombre.focus({ preventScroll: true }), reduce ? 0 : 600);
   };
+  const formAction = () => [button('Completar formulario', goToForm)];
 
   const setChips = (list) => { chips.innerHTML = ''; list.forEach((b) => chips.appendChild(b)); };
 
@@ -103,7 +106,7 @@ export function initChat() {
     setChips([
       button('Evaluar a mi paciente', () => { userSays('Quiero evaluar a mi paciente'); startEval(); }, 'chip--accent'),
       ...ids.map((id) => button(SHORT[id] || id, () => ask(FAQ.find((f) => f.id === id).q, id))),
-      button('Hablar con una persona', () => { userSays('Quiero hablar con una persona'); say('Con gusto. Elegí cómo preferís contactarte con el equipo de Terapias Avanzadas:', humanActions()); })
+      button('Completar formulario', goToForm)
     ]);
   };
 
@@ -122,11 +125,11 @@ export function initChat() {
       return;
     }
     if (!item) {
-      await say('No tengo una respuesta verificada para esa consulta. Prefiero no improvisar: te puedo poner en contacto con el equipo de Terapias Avanzadas.', humanActions());
+      await say('No tengo una respuesta verificada para esa consulta. Prefiero no improvisar: dejanos tu consulta en el formulario y el equipo de Terapias Avanzadas te responde.', formAction());
       track('chatbot_fallback');
       return;
     }
-    await say(esc(item.a), item.id === 'acceso' ? humanActions() : []);
+    await say(esc(item.a), item.id === 'acceso' ? formAction() : []);
     renderChips(FAQ.filter((f) => f.id !== item.id && SHORT[f.id]).slice(0, 4).map((f) => f.id));
   }
 

@@ -8,8 +8,6 @@ window.NIODERM_CONFIG = {
 
   // Email de respaldo para el formulario y el asistente.
   contactEmail: 'ro_gebala@hotmail.com',
-  contactPhone: '+541141054100',
-  contactPhoneLabel: '(+54) 11 4105-4100',
 
   // WhatsApp: dejar vacío hasta tener un número oficial. Formato: '5491100000000'.
   whatsapp: '',

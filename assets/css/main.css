@@ -401,7 +401,7 @@ p { text-wrap: pretty; }
 }
 
 /* ---- Banda biología ---- */
-.bio { position: relative; isolation: isolate; color: var(--white); background: var(--ink); padding-block: clamp(6rem, 4rem + 10vw, 14rem); overflow: clip; }
+.bio { position: relative; isolation: isolate; color: var(--white); background: var(--ink); padding-block: 10vh; overflow: clip; }
 .bio__media { position: absolute; inset: -10% 0; z-index: -1; }
 .bio__media picture, .mech__img picture { display: block; height: 100%; }
 .bio__media img { width: 100%; height: 100%; object-fit: cover; object-position: 60% 50%; }
@@ -603,7 +603,7 @@ p { text-wrap: pretty; }
 
 /* ============ Footer ============ */
 .footer { background: #071330; color: var(--muted-light); padding-block: var(--sp-8) calc(var(--sp-8) + 64px); font-size: var(--fs-sm); }
-.footer__grid { display: grid; gap: var(--sp-7); padding-bottom: var(--sp-7); border-bottom: 1px solid var(--line-light); }
+.footer__grid { display: grid; gap: var(--sp-7); }
 .footer__logo { width: 180px; height: auto; aspect-ratio: 4084 / 649; color: var(--white); margin-bottom: var(--sp-4); }
 .footer__nav ul { display: grid; gap: var(--sp-2); }
 .footer__nav a, .footer__lab a { text-decoration: none; display: inline-block; padding-block: 4px; }
