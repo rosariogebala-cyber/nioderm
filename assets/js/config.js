@@ -21,7 +21,7 @@ window.NIODERM_CONFIG = {
   //                   { type: 'vimeo', id: '123456789' }
   //                   null → se muestra como "Próximamente".
   videos: {
-    aplicacion: { type: 'mp4', src: 'https://cassara.com.ar/wp-content/uploads/2022/11/cassara-laboratorio-nioderm-injerto.mp4' },
+    aplicacion: { type: 'mp4', src: 'assets/video/aplicacion.mp4' },
     entrevista: null
   }
 };
