@@ -2,8 +2,9 @@
    Todo lo que depende del entorno de publicación vive acá. */
 window.NIODERM_CONFIG = {
   // Endpoint que recibe el formulario (POST JSON). En Vercel: /api/contact (ver api/contact.js).
-  // Si el envío falla, el sitio ofrece enviar la consulta por email con los datos precargados.
-  formEndpoint: 'api/contact',
+  // En GitHub Pages no hay servidor: FormSubmit reenvía la consulta al correo de prueba.
+  // La primera vez hay que confirmar el enlace que llega a esa casilla.
+  formEndpoint: 'https://formsubmit.co/ajax/ro_gebala@hotmail.com',
 
   // Email de respaldo para el formulario y el asistente.
   contactEmail: 'ro_gebala@hotmail.com',

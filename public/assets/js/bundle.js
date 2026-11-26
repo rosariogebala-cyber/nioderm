@@ -441,12 +441,29 @@ function initForm() {
     try {
       const ctrl = new AbortController();
       const t = setTimeout(() => ctrl.abort(), 12000);
-      const res = await fetch(cfg.formEndpoint || 'api/contact', {
+      const endpoint = cfg.formEndpoint || 'api/contact';
+      const viaRelay = /formsubmit\.co/.test(endpoint);
+      const body = viaRelay ? {
+        _subject: `Consulta NIODERM · ${o.perfil} · ${o.nombre}`,
+        _template: 'table',
+        _captcha: 'false',
+        name: o.nombre,
+        email: o.email,
+        message: o.mensaje || '(sin mensaje)',
+        Perfil: o.perfil,
+        Teléfono: o.telefono || '',
+        Provincia: o.provincia,
+        Especialidad: o.especialidad || '',
+        Institución: o.institucion || '',
+        Página: o.origen
+      } : o;
+      const res = await fetch(endpoint, {
         method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify(o), signal: ctrl.signal
+        body: JSON.stringify(body), signal: ctrl.signal
       });
       clearTimeout(t);
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const reply = await res.json().catch(() => ({}));
+      if (!res.ok || reply.success === false || reply.success === 'false') throw new Error(reply.message || `HTTP ${res.status}`);
       track('form_submit', { perfil: o.perfil, provincia: o.provincia });
       show(done);
       form.reset();
