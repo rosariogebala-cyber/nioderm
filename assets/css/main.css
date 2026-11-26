@@ -488,9 +488,8 @@ p { text-wrap: pretty; }
 .video.is-pending .video__play { background: rgb(255 255 255 / 0.2); color: var(--white); }
 .video__meta h3 { font-family: var(--font-display); font-size: var(--fs-lg); font-weight: 400; }
 .video__meta p { color: var(--muted-light); margin-top: var(--sp-2); max-width: 54ch; }
-@media (min-width: 1024px) {
-  .videos__grid { grid-template-columns: 1.7fr 1fr; align-items: start; gap: var(--sp-6); }
-  .video--secondary .video__frame { aspect-ratio: 4 / 5; }
+@media (min-width: 768px) {
+  .videos__grid { grid-template-columns: 1fr 1fr; align-items: start; gap: var(--sp-6); }
 }
 
 /* ---- Proceso ---- */
