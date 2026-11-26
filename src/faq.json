@@ -26,13 +26,13 @@
   {
     "id": "proceso",
     "q": "¿Cómo es el proceso desde la toma de piel hasta la aplicación?",
-    "a": "Se toma una pequeña muestra de piel sana, que viaja al área habilitada por ANMAT del Laboratorio Pablo Cassará. Allí se separan queratinocitos y fibroblastos, se amplifican ex vivo y se criopreservan. Luego se siembran en las membranas durante varios días y se entregan acondicionadas en placas de Petri dentro de un doble sobre, para aplicarse ese mismo día.",
-    "keys": ["proceso", "pasos", "como funciona", "cómo funciona", "toma", "biopsia", "ablacion", "ablación", "cultivo", "laboratorio", "tiempo", "cuanto tarda", "cuánto tarda", "demora"]
+    "a": "El flujo operativo tiene cinco pasos. 1) Solicitud médica: el médico tratante evalúa la herida de espesor total y solicita NIODERM® a Cassará, con consentimiento informado, formulario de datos y solicitud de análisis. 2) Muestra de piel sana: se toma en consultorio y se envía refrigerada de inmediato a planta. 3) Cultivo ex vivo bajo normas GMP: aislamiento celular, expansión y siembra sobre ambos lados de la membrana de colágeno. La manufactura lleva de 3 a 4 semanas. 4) Coordinación del procedimiento: el laboratorio avisa la fecha de entrega con 5 a 10 días de anticipación y el médico prepara el lecho para mantenerlo libre de infección. 5) Entrega y aplicación: el envío va en doble pouch estéril con certificado de análisis (CoA). La aplicación es aséptica, en consultorio, con la cara dérmica en contacto con el lecho de la lesión.",
+    "keys": ["proceso", "pasos", "como funciona", "cómo funciona", "flujo", "operativo", "toma", "muestra", "biopsia", "cultivo", "gmp", "laboratorio", "tiempo", "tiempos", "cuanto tarda", "cuánto tarda", "demora", "semanas", "manufactura", "solicitud", "coordinacion", "coordinación", "entrega", "pouch", "coa", "cara dermica", "cara dérmica"]
   },
   {
     "id": "lecho",
     "q": "¿Cómo debe prepararse el lecho de la herida?",
-    "a": "Desde la semana previa se controla el lecho (hisopado o biopsia cuantitativa) y se tratan las infecciones. El día del injerto se debrida hasta tejido vital, se irriga con abundante solución fisiológica y se controla el sangrado. La herida no debe estar infectada al momento de la aplicación. Si se usan antisépticos como clorhexidina o iodopovidona, deben suspenderse al menos 24 h antes.",
+    "a": "El laboratorio avisa la fecha de entrega con 5 a 10 días de anticipación. En ese plazo el médico prepara el lecho de la herida para mantenerlo libre de infección. La aplicación es aséptica, en consultorio, y la membrana se coloca con la cara dérmica en contacto con el lecho de la lesión.",
     "keys": ["lecho", "preparar", "preparacion", "preparación", "debridamiento", "infeccion", "infección", "infectada", "antiseptico", "antiséptico", "clorhexidina", "iodo", "povidona"]
   },
   {
