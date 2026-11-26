@@ -51,7 +51,14 @@ export function initVideos() {
           el.remove();
           card.classList.remove('is-playing');
           btn.hidden = false;
-          status.innerHTML = 'No se pudo cargar el video. <a href="' + src.src + '" target="_blank" rel="noopener">Abrir en otra pestaña</a>';
+          status.textContent = '';
+          status.append('No se pudo cargar el video. ');
+          const retry = document.createElement('a');
+          retry.href = src.src;
+          retry.target = '_blank';
+          retry.rel = 'noopener noreferrer';
+          retry.textContent = 'Abrir en otra pestaña';
+          status.append(retry);
           status.hidden = false;
         }, { once: true });
       }

@@ -85,11 +85,8 @@ let html = read('src/index.html')
   .replaceAll('{{SITE_URL}}', SITE_URL)
   .replaceAll('{{VERSION}}', VERSION);
 
-// En producción (Vercel o PROD=1) se precargan las fuentes. En local no, porque Chrome
-// bloquea la precarga desde file:// y así el index.html se puede abrir con doble clic.
-if (process.env.VERCEL || process.env.PROD === '1') {
-  html = html.replace('<link rel="stylesheet"', '<link rel="preload" href="assets/fonts/newsreader.woff2" as="font" type="font/woff2" crossorigin>\n<link rel="preload" href="assets/fonts/montserrat.woff2" as="font" type="font/woff2" crossorigin>\n<link rel="stylesheet"');
-}
+// Precarga de las dos familias. En file:// Chrome avisa, pero el sitio publicado es HTTP.
+html = html.replace('<link rel="stylesheet"', '<link rel="preload" href="assets/fonts/newsreader.woff2" as="font" type="font/woff2" crossorigin>\n<link rel="preload" href="assets/fonts/montserrat.woff2" as="font" type="font/woff2" crossorigin>\n<link rel="stylesheet"');
 
 if (/\{\{[A-Z_]+\}\}/.test(html)) throw new Error('Quedaron placeholders sin reemplazar');
 writeFileSync(join(root, 'public/index.html'), html);
