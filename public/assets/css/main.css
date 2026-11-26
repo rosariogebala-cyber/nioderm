@@ -191,8 +191,9 @@ p { text-wrap: pretty; }
 .site-header.is-solid { background: rgb(245 243 238 / 0.9); color: var(--ink); box-shadow: 0 1px 0 var(--line); backdrop-filter: saturate(1.4) blur(14px); -webkit-backdrop-filter: saturate(1.4) blur(14px); }
 .site-header.is-solid.is-on-dark { background: rgb(10 26 58 / 0.86); color: var(--white); box-shadow: 0 1px 0 var(--line-light); }
 .site-header__inner { height: 100%; max-width: var(--container); margin-inline: auto; padding-inline: var(--gutter); display: flex; align-items: center; justify-content: space-between; gap: var(--sp-5); }
-.brand { display: block; color: inherit; padding: 6px 0; }
-.brand__logo { width: clamp(124px, 10vw + 60px, 168px); height: auto; aspect-ratio: 4084 / 649; }
+.brand { display: grid; justify-items: start; gap: 3px; padding: 4px 0; color: inherit; }
+.brand__logo { width: clamp(118px, 9vw + 56px, 156px); height: auto; aspect-ratio: 4084 / 649; }
+.brand__tag { font-size: clamp(7.5px, 1.7vw, 10px); font-weight: 650; letter-spacing: 0.16em; text-transform: uppercase; line-height: 1.15; white-space: nowrap; opacity: 0.82; }
 
 .nav__toggle {
   display: inline-flex; align-items: center; gap: var(--sp-3); min-height: 44px; padding: 0 var(--sp-2) 0 var(--sp-4);
