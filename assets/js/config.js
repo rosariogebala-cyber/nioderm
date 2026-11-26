@@ -6,7 +6,7 @@ window.NIODERM_CONFIG = {
   formEndpoint: 'api/contact',
 
   // Email de respaldo para el formulario y el asistente.
-  contactEmail: 'consultas@cassara.com.ar',
+  contactEmail: 'ro_gebala@hotmail.com',
   contactPhone: '+541141054100',
   contactPhoneLabel: '(+54) 11 4105-4100',
 
